@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E91F27B-F4E5-4F65-B6B1-CA61691A6752}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NightSwapper</RootNamespace>
+    <AssemblyName>NightSwapper</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DiscordRPC, Version=1.0.175.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiscordRichPresence.1.0.175\lib\net35\DiscordRPC.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Siticone.UI">
+      <HintPath>..\..\..\Nora Swapper latest v17\nope\nope\latest\sourcecode\Swap\Swap\bin\Debug\Siticone.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Classes\AutoPak.cs" />
+    <Compile Include="src\Classes\JsonReaderServiceProvider.cs" />
+    <Compile Include="src\Classes\ObjectConvert.cs" />
+    <Compile Include="src\Classes\PakFile.cs" />
+    <Compile Include="src\Classes\RpcClass.cs" />
+    <Compile Include="src\Classes\SwapItem.cs" />
+    <Compile Include="src\Classes\TODO\todoList.cs" />
+    <Compile Include="src\Cosmetics\Emotes\Floss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Cosmetics\Emotes\Floss.Designer.cs">
+      <DependentUpon>Floss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Cosmetics\Skins\PinkGhoul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Cosmetics\Skins\PinkGhoul.Designer.cs">
+      <DependentUpon>PinkGhoul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Sys\CustomSwap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Sys\CustomSwap.Designer.cs">
+      <DependentUpon>CustomSwap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Sys\Swap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Sys\Swap.Designer.cs">
+      <DependentUpon>Swap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Sys\UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Sys\UI.Designer.cs">
+      <DependentUpon>UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Classes\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Sys\UserControls\Homepage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Sys\UserControls\Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Sys\UserControls\SkinControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Sys\UserControls\SkinControl.Designer.cs">
+      <DependentUpon>SkinControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Sys\UserControls\SwapUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\Sys\UserControls\SwapUC.Designer.cs">
+      <DependentUpon>SwapUC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="src\Cosmetics\Emotes\Floss.resx">
+      <DependentUpon>Floss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Cosmetics\Skins\PinkGhoul.resx">
+      <DependentUpon>PinkGhoul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Sys\CustomSwap.resx">
+      <DependentUpon>CustomSwap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Sys\Swap.resx">
+      <DependentUpon>Swap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Sys\UI.resx">
+      <DependentUpon>UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="src\Sys\UI.resx">
+      <DependentUpon>UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Sys\UserControls\Homepage.resx">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Sys\UserControls\SkinControl.resx">
+      <DependentUpon>SkinControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Sys\UserControls\SwapUC.resx">
+      <DependentUpon>SwapUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="src\Classes\TODO\Tests\base.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\Cosmetics\Backblings\" />
+    <Folder Include="src\Cosmetics\Pickaxes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLIP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3692eea092dce62732b7b65ab2f8cd1b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3692eea092dce62732b7b65ab2f8cd1b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-menu-icon-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\87985-battle-royale-pickaxe-fortnite-hardware-download-hq-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back_Bling_-_Icon_-_Fortnite.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
